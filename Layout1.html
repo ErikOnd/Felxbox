@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,100&family=Roboto:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: aqua;
+            height: 100vh;
+        }
+
+        .header {
+            height: 15%;
+            width: 100%;
+            background-color: black;
+        }
+
+        .main {
+            display: flex;
+            height: 70%;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .article {
+            background-color: rgb(255, 255, 255);
+            height: 100%;
+            width: 60%;
+        }
+
+        .aside {
+            background-color: rgb(50 3 136);
+            height: 100%;
+            width: 20%;
+        }
+
+        .nav {
+            background-color: rgb(194 33 119);
+            height: 100%;
+            width: 20%;
+        }
+
+        .footer {
+            display: flex;
+            height: 15%;
+            width: 100%;
+            background-color: black;
+        }
+
+        h2 {
+            color: white;
+            padding-left: 20px;
+        }
+
+        .black {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Header</h2>
+        </div>
+        <div class="main">
+            <div class="article">
+                <h2 class="black">Article</h2>
+            </div>
+            <div class="aside">
+                <h2>Aside</h2>
+            </div>
+            <div class="nav">
+                <h2>Nav</h2>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
+    </div>
+</body>
+
+</html>
