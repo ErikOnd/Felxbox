@@ -18,80 +18,102 @@
         .container {
             display: flex;
             flex-direction: column;
-            width: 100%;
-            background-color: aqua;
             height: 120vh;
         }
 
         .header {
-            height: 20vh;
-            width: 100%;
             background-color: black;
+            height: 20vh;
         }
 
-        .main {
+        .innerContent {
             display: flex;
+            flex-direction: row;
             height: 80vh;
-            width: 100%;
-            background-color: rgb(255, 255, 255);
-        }
-
-        .article {
-            background-color: rgb(255, 255, 255);
-            height: 100%;
-            width: 60%;
-        }
-
-        .aside {
-            background-color: rgb(50 3 136);
-            height: 100%;
-            width: 20%;
         }
 
         .nav {
+            flex-grow: 1;
             background-color: rgb(194 33 119);
-            height: 100%;
-            width: 20%;
+        }
+
+        .article {
+            flex-grow: 5;
+            background-color: white;
+
+        }
+
+        .aside {
+            flex-grow: 1;
+            background-color: rgb(50 3 136);
         }
 
         .footer {
-            display: flex;
-            height: 20vh;
-            width: 100%;
+            flex-grow: 1;
             background-color: black;
         }
 
-        h2 {
-            color: white;
-            padding-left: 20px;
+        .nav2 {
+            display: none;
         }
 
-        .black {
-            color: black;
+        @media(max-width: 1000px) {
+            .nav {
+                display: none;
+            }
+
+            .nav2 {
+                display: block;
+                flex-grow: 0.5;
+                background-color: rgb(194 33 119);
+            }
+
+            .aside {
+                flex-grow: 2;
+            }
+
+            .innerContent {
+                height: 70vh;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .nav {
+                display: block;
+                flex-grow: 1;
+            }
+
+            .nav2 {
+                display: none;
+                flex-grow: 1;
+                background-color: rgb(194 33 119);
+            }
+
+            .innerContent {
+                flex-direction: column;
+                height: 80vh;
+            }
+
+            .aside {
+                flex-grow: 1;
+            }
         }
     </style>
+
 </head>
 
 <body>
     <div class="container">
-        <div class="header">
-            <h2>Header</h2>
+        <div class="header"></div>
+        <div class="nav2"></div>
+        <div class="innerContent">
+            <div class="nav"></div>
+            <div class="article"></div>
+            <div class="aside"></div>
         </div>
-        <div class="main">
-            <div class="article">
-                <h2 class="black">Article</h2>
-            </div>
-            <div class="aside">
-                <h2>Aside</h2>
-            </div>
-            <div class="nav">
-                <h2>Nav</h2>
-            </div>
-        </div>
-        <div class="footer">
-            <h2>Footer</h2>
-        </div>
+        <div class="footer"></div>
     </div>
+
 </body>
 
 </html>
